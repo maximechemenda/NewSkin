@@ -1,0 +1,21 @@
+development:
+  adapter: mysql2
+  database: newskin
+  pool: 5
+  host: localhost
+  username: root
+  password: toto13
+  timeout: 5000
+  encoding: utf8
+  collation: utf8_general_ci
+
+# production:
+#   adapter: mysql2
+#   pool: 30
+#   database: map_5g
+#   username: map_5g
+#   password:
+#   host: localhost
+#   socket: /var/run/mysqld/mysqld.sock
+#   encoding: utf8
+#   collation: utf8_general_ci

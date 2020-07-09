@@ -7,5 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-Actor.create(name: 'name1', description: 'Description1')
-Actor.create(name: 'name2', description: 'Description2')
+=begin Actor.create(name: 'name1', description: 'Description1')
+Actor.create(name: 'name2', description: 'Description2') =end

@@ -2,8 +2,6 @@ class ActorsController < ApplicationController
 
   def index
     @actors = Actor.all
-    print "hello"
-    print @actors
   end
 
   def show
@@ -11,3 +9,6 @@ class ActorsController < ApplicationController
   end
 
 end
+
+
+

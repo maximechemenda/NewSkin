@@ -1,2 +1,7 @@
-<h1>Actors#edit</h1>
-<p>Find me in app/views/actors/edit.html.erb</p>
+<h3>Update Actor Details</h3>
+<%= form_with model: @actor do |form| %>
+  <%= form.text_field :name, placeholder: "name" %>
+  <%= form.text_field :description, placeholder: "description" %>
+
+  <%= form.submit %>
+<% end %>

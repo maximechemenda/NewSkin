@@ -925,3 +925,885 @@ Processing by ActorsController#show as HTML
 Completed 200 OK in 31ms (Views: 27.2ms | ActiveRecord: 1.3ms)
 
 
+Started GET "/" for ::1 at 2020-07-09 15:12:23 +0200
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/chemenda/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  ↳ /Users/chemenda/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  Rendered actors/index.html.haml within layouts/application (8.9ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: %ul
+    2:   - @actors.each do |actor|
+    3:     %li= link_to actor.name, actor
+  
+app/views/actors/index.html.haml:2:in `_app_views_actors_index_html_haml___3103658945933960500_70330421120460'
+Started GET "/" for ::1 at 2020-07-09 15:13:33 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (61.8ms)
+Completed 200 OK in 431ms (Views: 404.2ms | ActiveRecord: 20.7ms)
+
+
+Started GET "/actors/1" for ::1 at 2020-07-09 15:13:35 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:8
+  Rendering actors/show.html.haml within layouts/application
+  Rendered actors/show.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 41ms (Views: 32.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 15:16:04 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (27.0ms)
+Completed 200 OK in 60ms (Views: 44.7ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/actors/1" for ::1 at 2020-07-09 15:16:05 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActor Load (1.3ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:8
+  Rendering actors/show.html.haml within layouts/application
+  Rendered actors/show.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 32ms (Views: 27.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 15:17:08 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (16.2ms)
+Completed 200 OK in 33ms (Views: 22.1ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/actors/1" for ::1 at 2020-07-09 15:17:10 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:8
+Completed 500 Internal Server Error in 340ms (ActiveRecord: 0.4ms)
+
+
+  
+NameError (undefined local variable or method `window' for #<ActorsController:0x00007fee24b58e10>):
+  
+app/controllers/actors_controller.rb:9:in `show'
+Started GET "/" for ::1 at 2020-07-09 15:20:52 +0200
+  
+SyntaxError (/Users/chemenda/Desktop/testingNewskin/app/controllers/actors_controller.rb:32: `@' without identifiers is not allowed as an instance variable name
+/Users/chemenda/Desktop/testingNewskin/app/controllers/actors_controller.rb:32: syntax error, unexpected end-of-input
+    @ = Actor.find(params[:id])
+    ^~):
+  
+app/controllers/actors_controller.rb:32: `@' without identifiers is not allowed as an instance variable name
+app/controllers/actors_controller.rb:32: syntax error, unexpected end-of-input
+Started GET "/" for ::1 at 2020-07-09 15:21:10 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (7.3ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (37.3ms)
+Completed 200 OK in 79ms (Views: 52.4ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/actors/1" for ::1 at 2020-07-09 15:21:12 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActor Load (8.8ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:8
+  Rendering actors/show.html.haml within layouts/application
+  Rendered actors/show.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 71ms (Views: 57.2ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/actors/2" for ::1 at 2020-07-09 15:21:14 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:8
+  Rendering actors/show.html.haml within layouts/application
+  Rendered actors/show.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 58ms (Views: 52.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 15:29:14 +0200
+  [1m[35m (0.3ms)[0m  [1m[35mSET NAMES utf8 COLLATE utf8_general_ci,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  ↳ /Users/chemenda/.rvm/rubies/ruby-2.6.3/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.1/lib/sprockets/rails/quiet_assets.rb:13
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  Rendered actors/index.html.haml within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (Illegal nesting: content can't be both given on the same line as %li and nested within it.):
+     6: %ul 
+     7:   - @actors.each do |actor|
+     8:     %li= link_to actor.name, actor
+     9:       %ol 
+    10:         %li= button_to 'Edit', edit_actor_path(actor), method: 'get' 
+    11:         %li= button_to 'Remove', actor_ath(actor), method: 'delete', data: { confirm: 'Are you sure?' }
+    12: 
+  
+app/views/actors/index.html.haml:9
+Started GET "/" for ::1 at 2020-07-09 15:29:33 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (1.2ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (197.7ms)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 9.9ms)
+
+
+  
+ActionView::Template::Error (undefined method `actor_ath' for #<#<Class:0x00007fee29a589e8>:0x00007fee252597c8>
+Did you mean?  actor_path
+               actors_path
+               actor_url):
+     7:   - @actors.each do |actor|
+     8:     %li= link_to actor.name, actor       
+     9:     %li= button_to 'Edit', edit_actor_path(actor), method: 'get' 
+    10:     %li= button_to 'Remove', actor_ath(actor), method: 'delete', data: { confirm: 'Are you sure?' }
+    11: 
+    12:   
+    13: %span= link_to "Add a New Actpr", new_actor_path
+  
+app/views/actors/index.html.haml:10:in `block in _app_views_actors_index_html_haml___3103658945933960500_70330401083400'
+app/views/actors/index.html.haml:7:in `_app_views_actors_index_html_haml___3103658945933960500_70330401083400'
+Started GET "/" for ::1 at 2020-07-09 15:29:43 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (6.4ms)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 15:29:57 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (4.2ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (8.9ms)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/actors/1/edit" for ::1 at 2020-07-09 15:29:59 +0200
+Processing by ActorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering actors/edit.html.erb within layouts/application
+  Rendered actors/edit.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 44ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started DELETE "/actors/1" for ::1 at 2020-07-09 15:30:05 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for ActorsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/actors/1" for ::1 at 2020-07-09 15:30:38 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for ActorsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-09 15:30:45 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (1.2ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/actors/1/edit" for ::1 at 2020-07-09 15:30:48 +0200
+Processing by ActorsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  Rendering actors/edit.html.erb within layouts/application
+  Rendered actors/edit.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/actors/1/edit" for ::1 at 2020-07-09 15:30:59 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/actors/1/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/actors/1/edit" for ::1 at 2020-07-09 15:31:03 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/actors/1/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/actors/1/edit" for ::1 at 2020-07-09 15:31:06 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/actors/1/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/actors/1/edit" for ::1 at 2020-07-09 15:31:09 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/actors/1/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/actors/1/edit" for ::1 at 2020-07-09 15:31:11 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/actors/1/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-09 15:31:18 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/actors/1" for ::1 at 2020-07-09 15:31:23 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mActor Load (3.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:8
+  Rendering actors/show.html.haml within layouts/application
+  Rendered actors/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 28ms (Views: 21.8ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/actors/new" for ::1 at 2020-07-09 15:31:27 +0200
+Processing by ActorsController#new as HTML
+  Rendering actors/new.html.erb within layouts/application
+  Rendered actors/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 54ms (Views: 52.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/actors" for ::1 at 2020-07-09 15:31:33 +0200
+Processing by ActorsController#create as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"zYJJ1d31wW0NciL6qohgI2uj+YPUWV6j13jGU5r04jRI8InQWc8VdEz3GLPiSIDSofP+Q9DB9h8Po/zcn8xTGA==", "actor"=>{"name"=>"hello", "description"=>"goodbye"}, "commit"=>"Create Actor"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/actors_controller.rb:16
+  [1m[36mActor Create (0.3ms)[0m  [1m[32mINSERT INTO `actors` (`name`, `description`, `created_at`, `updated_at`) VALUES ('hello', 'goodbye', '2020-07-09 13:31:33', '2020-07-09 13:31:33')[0m
+  ↳ app/controllers/actors_controller.rb:16
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/actors_controller.rb:16
+Redirected to http://localhost:3000/actors
+Completed 200 OK in 4ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/actors" for ::1 at 2020-07-09 15:31:33 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 15:32:57 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (4.2ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (31.0ms)
+Completed 200 OK in 65ms (Views: 41.0ms | ActiveRecord: 15.3ms)
+
+
+Started DELETE "/actors/1" for ::1 at 2020-07-09 15:33:05 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for ActorsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/actors/1" for ::1 at 2020-07-09 15:33:34 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for ActorsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-09 15:33:37 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.8ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (48.1ms)
+Completed 200 OK in 80ms (Views: 54.0ms | ActiveRecord: 22.4ms)
+
+
+Started DELETE "/actors/1" for ::1 at 2020-07-09 15:33:40 +0200
+  
+AbstractController::ActionNotFound (The action 'destroy' could not be found for ActorsController):
+  
+actionpack (5.2.3) lib/abstract_controller/base.rb:129:in `process'
+actionview (5.2.3) lib/action_view/rendering.rb:32:in `process'
+actionpack (5.2.3) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (5.2.3) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:34:in `serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.3) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.3) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.3) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.3) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.3) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-07-09 15:34:18 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (35.9ms)
+Completed 200 OK in 74ms (Views: 44.9ms | ActiveRecord: 23.4ms)
+
+
+Started DELETE "/actors/1" for ::1 at 2020-07-09 15:34:20 +0200
+Processing by ActorsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"U3QfbIhezMHUBYmfxoxLkv7wcZSyICo6pwLLsvbz0rnDJ/1ax+tFHOEsxGT7oO/bprGmTtNZNmQZUfnrPjRqRw==", "id"=>"1"}
+  [1m[36mActor Load (0.5ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 1 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:22
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/actors_controller.rb:24
+  [1m[36mActor Destroy (0.5ms)[0m  [1m[31mDELETE FROM `actors` WHERE `actors`.`id` = 1[0m
+  ↳ app/controllers/actors_controller.rb:24
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/actors_controller.rb:24
+Redirected to http://localhost:3000/actors
+Completed 302 Found in 7ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/actors" for ::1 at 2020-07-09 15:34:20 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (1.2ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (10.2ms)
+Completed 200 OK in 35ms (Views: 31.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/actors/2/edit" for ::1 at 2020-07-09 15:34:28 +0200
+Processing by ActorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  Rendering actors/edit.html.erb within layouts/application
+  Rendered actors/edit.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 31ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/actors/2/edit" for ::1 at 2020-07-09 15:34:34 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/actors/2/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/actors/2/edit" for ::1 at 2020-07-09 15:34:36 +0200
+  
+ActionController::RoutingError (No route matches [POST] "/actors/2/edit"):
+  
+actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.3) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.3) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/actors/2/edit" for ::1 at 2020-07-09 15:34:58 +0200
+Processing by ActorsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActor Load (2.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:30
+  Rendering actors/edit.html.erb within layouts/application
+  Rendered actors/edit.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 60ms (Views: 21.0ms | ActiveRecord: 19.0ms)
+
+
+Started PATCH "/actors/2" for ::1 at 2020-07-09 15:34:59 +0200
+Processing by ActorsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cC3UfENr9YD6EZZPYodjz9z/TIL0Z3xQG4N38OuojBzgfjZKDN58Xc8427Rfq8eGhL6bWJUeYA6l0EWpI2804g==", "actor"=>{"name"=>"name2", "description"=>"Description2"}, "commit"=>"Update Actor", "id"=>"2"}
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:34
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/actors_controller.rb:35
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/actors_controller.rb:35
+Redirected to http://localhost:3000/actors/2
+Completed 200 OK in 3ms (ActiveRecord: 0.6ms)
+
+
+Started GET "/actors/2" for ::1 at 2020-07-09 15:34:59 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 2 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:8
+  Rendering actors/show.html.haml within layouts/application
+  Rendered actors/show.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 57ms (Views: 51.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 15:35:07 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (1.7ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/actors/3/edit" for ::1 at 2020-07-09 15:35:10 +0200
+Processing by ActorsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mActor Load (0.6ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:30
+  Rendering actors/edit.html.erb within layouts/application
+  Rendered actors/edit.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 23ms (Views: 19.0ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/actors/3" for ::1 at 2020-07-09 15:35:14 +0200
+Processing by ActorsController#update as JS
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Rpq2GmpFi8oMb5uLyqj8cyXQyds2DSLg1/suoqWA6ubWyVQsJfACFzlG1nD3hFg6fZEeAVd0Pr5pqBz7bUdSGA==", "actor"=>{"name"=>"hello you ", "description"=>"goodbye you"}, "commit"=>"Update Actor", "id"=>"3"}
+  [1m[36mActor Load (0.4ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:34
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/actors_controller.rb:35
+  [1m[36mActor Update (1.2ms)[0m  [1m[33mUPDATE `actors` SET `name` = 'hello you ', `description` = 'goodbye you', `updated_at` = '2020-07-09 13:35:14' WHERE `actors`.`id` = 3[0m
+  ↳ app/controllers/actors_controller.rb:35
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/actors_controller.rb:35
+Redirected to http://localhost:3000/actors/3
+Completed 200 OK in 14ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/actors/3" for ::1 at 2020-07-09 15:35:14 +0200
+Processing by ActorsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mActor Load (0.7ms)[0m  [1m[34mSELECT  `actors`.* FROM `actors` WHERE `actors`.`id` = 3 LIMIT 1[0m
+  ↳ app/controllers/actors_controller.rb:8
+  Rendering actors/show.html.haml within layouts/application
+  Rendered actors/show.html.haml within layouts/application (3.3ms)
+Completed 200 OK in 47ms (Views: 43.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for ::1 at 2020-07-09 15:35:20 +0200
+Processing by ActorsController#index as HTML
+  Rendering actors/index.html.haml within layouts/application
+  [1m[36mActor Load (0.3ms)[0m  [1m[34mSELECT `actors`.* FROM `actors`[0m
+  ↳ app/views/actors/index.html.haml:2
+  Rendered actors/index.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 43ms (Views: 40.4ms | ActiveRecord: 0.3ms)
+
+

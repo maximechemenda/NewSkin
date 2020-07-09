@@ -1,5 +1,10 @@
-%ul
+%ul 
   - @actors.each do |actor|
-    %li= link_to actor.name, actor
+    %li= link_to actor.name, actor       
+    %li= button_to 'Edit', edit_actor_path(actor), method: 'get' 
+    %li= button_to 'Remove', actor_path(actor), method: 'delete', data: { confirm: 'Are you sure?' }
+
+  
+%span= link_to "Add a New Actpr", new_actor_path
 
 

@@ -1,0 +1,6 @@
+<h3>Ask a New Question!</h3>
+<%= form_with model: @question do |form| %>
+  <%= form.text_field :text, placeholder: "text" %>
+
+  <%= form.submit %>
+<% end %>

@@ -1,0 +1,11 @@
+%ul 
+  - @questions.each do |question|
+    %li= question.text
+    /%li= button_to 'Edit', edit_actor_path(actor), method: 'get' 
+    /%li= button_to 'Remove', actor_path(actor), method: 'delete', data: { confirm: 'Are you sure?' }
+
+  
+%span= link_to "Add a New Question", new_question_path
+
+
+
